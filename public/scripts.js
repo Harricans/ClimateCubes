@@ -1,13 +1,13 @@
 window.addEventListener("load", function () {
   const videoPlayer = document.getElementById("video-player");
   const videoSources = [
-    "/videos/video1.mp4",
-    "/videos/video2.mp4",
-    "/videos/video3.mp4",
-    "/videos/video4.mp4",
-    "/videos/video5.mp4",
-    "/videos/video6.mp4",
-    "/videos/video7.mp4",
+    "./videos/video1.mp4",
+    "./videos/video2.mp4",
+    "./videos/video3.mp4",
+    "./videos/video4.mp4",
+    "./videos/video5.mp4",
+    "./videos/video6.mp4",
+    "./videos/video7.mp4",
   ]; // Add the paths of videos
   let currentIndex = 0;
 

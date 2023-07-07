@@ -610,10 +610,10 @@ select {
 /* Fonts import */
 @font-face {
   font-family: "Inconsolata";
-  src: url("fonts/Inconsolata_Condensed-Regular.ttf") format("ttf");
+  src: url("./fonts/Inconsolata_Condensed-Regular.ttf") format("ttf");
 
   font-family: "PPNeueBit";
-  src: url(/fonts/PPNeueBit-Bold.woff) format("woff");
+  src: url("./fonts/PPNeueBit-Bold.woff") format("woff");
 }
 
 :root {
