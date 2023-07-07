@@ -927,3 +927,120 @@ footer {
   max-height: 60vh; /* Adjust the max-height value as needed */
   overflow-y: auto;
 }
+
+@media (max-width: 768px) {
+
+  header{
+    display: none;
+  }
+
+  .social-links{
+    display: none;
+  }
+  .hero-section {
+    height: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-section {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .section-text,
+  .section-image {
+    margin-top: 2rem;
+  }
+
+  .section-text p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .section-image img,
+  .section-image video {
+    width: 100%;
+    height: auto;
+  }
+
+  .roadmap-container {
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .roadmap-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .roadmap-left {
+    flex-basis: auto;
+  }
+
+  .roadmap-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+  }
+
+  .roadmap-right {
+    padding-left: 0;
+    border-left: none;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
+
+  .footer-links a {
+    margin: 0.5rem;
+  }
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  width: 0.5rem; /* Adjust the width as needed */
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Make the track transparent */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Make the thumb transparent */
+}
+
+/* Hide scrollbar for Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+}

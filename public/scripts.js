@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   const videoPlayer = document.getElementById("video-player");
   const videoSources = [
     "./videos/video1.mp4",
@@ -10,10 +10,18 @@ window.addEventListener("load", function () {
     "./videos/video7.mp4",
   ]; // Add the paths of videos
   let currentIndex = 0;
+  let preloadedVideos = [];
+
+  // Preload all videos
+  videoSources.forEach(function(source) {
+    const video = new Image();
+    video.src = source;
+    preloadedVideos.push(video);
+  });
 
   function playNextVideo() {
     currentIndex = (currentIndex + 1) % videoSources.length;
-    videoPlayer.src = videoSources[currentIndex];
+    videoPlayer.src = preloadedVideos[currentIndex].src;
     videoPlayer.play();
   }
 
