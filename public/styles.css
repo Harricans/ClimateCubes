@@ -785,6 +785,7 @@ main {
 
 .section-image {
   background-color: transparent;
+  position: relative;
 }
 
 .section-image > * {
@@ -794,9 +795,10 @@ main {
 }
 
 #video-player {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover
 }
 
 /* Roadmap section */
