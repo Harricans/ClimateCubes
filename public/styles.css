@@ -600,10 +600,7 @@ select {
   }
 }
 
-
-
-
-.star-container{
+.star-container {
   position: fixed;
   z-index: -1;
 }
@@ -704,7 +701,8 @@ nav {
   z-index: 9999;
 }
 
-.social-links a:hover, .icon-small:hover {
+.social-links a:hover,
+.icon-small:hover {
   transform: scale(1.2);
 }
 
@@ -798,7 +796,7 @@ main {
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover
+  object-fit: cover;
 }
 
 /* Roadmap section */
@@ -814,8 +812,10 @@ main {
   margin-bottom: 3rem;
   padding-bottom: 3rem;
 }
-
-#roadmap{
+.roadmap-container > h2 {
+  padding-bottom: 1rem;
+}
+#roadmap {
   text-align: center;
 }
 
@@ -849,6 +849,57 @@ main {
   border-left: 3px solid var(--accent);
 }
 
+/* Gallery section */
+.gallery-container {
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+.gallery-container > h2 {
+  margin-bottom: 7rem;
+}
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 275px;
+  transform-style: preserve-3d;
+  animation: rotate 35s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate {
+  from {
+    transform: perspective(1200px) rotateY(0deg);
+  }
+
+  to {
+    transform: perspective(1200px) rotateY(360deg);
+  }
+}
+
+.gallery span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(480px);
+}
+
+.gallery span img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.gallery span:hover img {
+  transform: scale(1.5);
+}
+
 h1 {
   font-size: 11rem;
 }
@@ -866,12 +917,11 @@ h3 {
   font-family: PPNeueBit;
 }
 
-
 /* footer section */
 footer {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(var(--background), );
+  background: linear-gradient(var(--background));
   color: var(--text);
 }
 
@@ -886,7 +936,7 @@ footer {
   margin: 0 0.5rem;
 }
 
-.footer-info > *{
+.footer-info > * {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -894,12 +944,13 @@ footer {
   color: white;
 }
 
-.footer-info a:hover{
- color: var(--accent);
- cursor: pointer;
+.footer-info a:hover {
+  color: var(--accent);
+  cursor: pointer;
 }
 
-.popup, .modal {
+.popup,
+.modal {
   display: none;
   position: fixed;
   top: 0;
@@ -913,7 +964,8 @@ footer {
   color: var(--background);
 }
 
-.popup-content, .modal-content {
+.popup-content,
+.modal-content {
   background-color: #fff;
   max-width: 600px;
   margin: 20px auto;
@@ -931,12 +983,36 @@ footer {
 }
 
 @media (max-width: 768px) {
+  .gallery-container {
+    padding: 2rem 0;
+    overflow-x: hidden;
+    height: inherit;
+  }
+  .gallery-container > h2 {
+    margin-bottom: 1rem;
+  }
+  .gallery span {
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(300px);
+  }
+  .gallery {
+    margin-top: 2rem;
+  }
+  .gallery span img {
+    transform: scale(
+      0.5
+    ); /* Adjust the scale factor to make the images smaller */
+    transition: transform 0.3s;
+  }
 
-  header{
+  .gallery span:hover img {
+    transform: scale(0.7); /* Reset the scale on hover */
+  }
+
+  header {
     display: none;
   }
 
-  .social-links{
+  .social-links {
     display: none;
   }
   .hero-section {
@@ -1023,26 +1099,26 @@ footer {
     margin: 0.5rem;
   }
   /* Hide scrollbar for Chrome, Safari, and Opera */
-::-webkit-scrollbar {
-  width: 0.5rem; /* Adjust the width as needed */
-}
+  ::-webkit-scrollbar {
+    width: 0.5rem; /* Adjust the width as needed */
+  }
 
-::-webkit-scrollbar-track {
-  background-color: transparent; /* Make the track transparent */
-}
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Make the track transparent */
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Make the thumb transparent */
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make the thumb transparent */
+  }
 
-/* Hide scrollbar for Firefox */
-html {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-}
+  /* Hide scrollbar for Firefox */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
 
-body {
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-}
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+  }
 }
